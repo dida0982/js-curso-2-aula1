@@ -1,9 +1,18 @@
-let title = document.querySelector( 'h1' );
-title.innerHTML = 'Guessing Game';
+// let title = document.querySelector( 'h1' );
+// title.innerHTML = 'Guessing Game';
 
-let paragraph = document.querySelector( 'p' );
-paragraph.innerHTML = 'Choose a number between 1 and 10.';
+// let paragraph = document.querySelector( 'p' );
+// paragraph.innerHTML = 'Choose a number between 1 and 10.';
 
+
+function displayTextOnScreen(tag, text) {
+    let field = document.querySelector( tag );
+    field.innerHTML = text;
+}
+
+displayTextOnScreen( 'h1', 'Game of secret number .' );
+displayTextOnScreen( 'p', 'Choose a number the 1 and 10.' );
 function checkKick(params) {
-    console.log('The button was clicked.');
+    console.log('The button was clicked ');
+
 }
