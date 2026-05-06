@@ -14,7 +14,7 @@ function checkKick() {
     if ( kick == secretNumber )
     {
         displayTextOnScreen( 'h1', 'He got it right.' );
-        displayTextOnScreen( 'p', 'You descovered secret number.' );
+        displayTextOnScreen( 'p', 'You discovered a secret number.' );
     }
 }
 
