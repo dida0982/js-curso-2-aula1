@@ -10,8 +10,10 @@ displayTextOnScreen( 'h1', 'Game of secret number.' );
 displayTextOnScreen( 'p', 'Choose a number the 1 and 10.' );
 function checkKick() {
     let kick = document.querySelector( 'input' ).value;
-    if (kick == secretNumber) {
-        
+
+    if ( kick == secretNumber )
+    {
+        displayTextOnScreen( 'h1', 'Acertou' );
     }
 }
 
