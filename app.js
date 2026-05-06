@@ -1,4 +1,4 @@
-let secretNumber = 7;
+let secretNumber = generateRandomNumber;
 
 function displayTextOnScreen ( tag, text )
 {
