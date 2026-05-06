@@ -47,4 +47,5 @@ function restartGame() {
     clearField();
     attempts = 1;
     displayOfficialMessage();
+    document.getElementById( 'restart' ).setAttribute( 'disabled', true );
 }
