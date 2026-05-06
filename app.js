@@ -1,5 +1,5 @@
 let secretNumber = randomNumber();
-
+let attempts = 1;
 function displayTextOnScreen ( tag, text )
 {
     let field = document.querySelector( tag );
@@ -13,13 +13,16 @@ function checkKick() {
 
     if ( kick == secretNumber ){
         displayTextOnScreen( 'h1', 'He got it right.' );
-        displayTextOnScreen( 'p', 'You discovered a secret number.' );
+        let attemptsWord = attempts > 1 ? 'attempts' : 'attempt';
+        let attemptsMessage = `You discovered the secret number after ${attempts} ${attemptsWord}.`;
+        displayTextOnScreen( 'p', attemptsMessage );
     } else{
         if (kick > secretNumber) {
             displayTextOnScreen( 'p', 'The secret number is smaller' );
         } else{
             displayTextOnScreen( 'p', 'The secret number is higher' );
         }
+        attempts++;
     }
 }
 
