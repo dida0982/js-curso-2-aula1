@@ -23,9 +23,15 @@ function checkKick() {
             displayTextOnScreen( 'p', 'The secret number is higher' );
         }
         attempts++;
+        clearField();
     }
 }
 
 function randomNumber() {
     return parseInt( Math.random() * 10 + 1 );
+}
+
+function clearField() {
+    kick = document.querySelector( 'input' );
+    kick.value = '';
 }
