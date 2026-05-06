@@ -13,7 +13,7 @@ function checkKick() {
 
     if ( kick == secretNumber )
     {
-        displayTextOnScreen( 'h1', 'Acertou' );
+        displayTextOnScreen( 'h1', 'He got it right.' );
     }
 }
 
