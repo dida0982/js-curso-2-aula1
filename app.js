@@ -6,8 +6,13 @@ function displayTextOnScreen ( tag, text )
     field.innerHTML = text;
 }
 
-displayTextOnScreen( 'h1', 'Game of secret number.' );
-displayTextOnScreen( 'p', 'Choose a number the 1 and 10.' );
+function displayOfficialMessage() {
+    displayTextOnScreen( 'h1', 'Game of secret number.' );
+    displayTextOnScreen( 'p', 'Choose a number the 1 and 10.' );
+}
+
+displayOfficialMessage();
+
 function checkKick() {
     let kick = document.querySelector( 'input' ).value;
 
@@ -41,6 +46,5 @@ function restartGame() {
     secretNumber = randomNumber();
     clearField();
     attempts = 1;
-    displayTextOnScreen( 'h1', 'Game of secret number.' );
-    displayTextOnScreen( 'p', 'Choose a number the 1 and 10.' );
+    displayOfficialMessage();
 }
