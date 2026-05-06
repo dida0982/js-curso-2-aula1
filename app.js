@@ -1,4 +1,4 @@
-let secretNumber = generateRandomNumber();
+let secretNumber = 7;
 
 function displayTextOnScreen ( tag, text )
 {
@@ -11,16 +11,13 @@ displayTextOnScreen( 'p', 'Choose a number the 1 and 10.' );
 function checkKick() {
     let kick = document.querySelector( 'input' ).value;
 
-    if ( kick == secretNumber )
-    {
+    if ( kick == secretNumber ){
         displayTextOnScreen( 'h1', 'He got it right.' );
         displayTextOnScreen( 'p', 'You discovered a secret number.' );
-    } else
-    {
-        if (secretNumber>kick) {
+    } else{
+        if (kick > secretNumber) {
             displayTextOnScreen( 'p', 'The secret number is smaller' );
-        } else
-        {
+        } else{
             displayTextOnScreen( 'p', 'The secret number is higher' );
         }
     }
