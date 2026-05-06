@@ -9,8 +9,8 @@ function displayTextOnScreen ( tag, text )
 displayTextOnScreen( 'h1', 'Game of secret number.' );
 displayTextOnScreen( 'p', 'Choose a number the 1 and 10.' );
 function checkKick() {
-    console.log('The button was clicked ');
-
+    let kick = document.querySelector( 'input' )?.value;
+    console.log(kick == secretNumber);
 }
 
 function randomNumber() {
