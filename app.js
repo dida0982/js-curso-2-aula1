@@ -16,6 +16,7 @@ function checkKick() {
         let attemptsWord = attempts > 1 ? 'attempts' : 'attempt';
         let attemptsMessage = `You discovered the secret number after ${attempts} ${attemptsWord}.`;
         displayTextOnScreen( 'p', attemptsMessage );
+        document.getElementById( 'restart' ).removeAttribute( 'disabled' );
     } else{
         if (kick > secretNumber) {
             displayTextOnScreen( 'p', 'The secret number is smaller' );
@@ -34,4 +35,12 @@ function randomNumber() {
 function clearField() {
     kick = document.querySelector( 'input' );
     kick.value = '';
+}
+
+function restartGame() {
+    secretNumber = randomNumber();
+    clearField();
+    attempts = 1;
+    displayTextOnScreen( 'h1', 'Game of secret number.' );
+    displayTextOnScreen( 'p', 'Choose a number the 1 and 10.' );
 }
