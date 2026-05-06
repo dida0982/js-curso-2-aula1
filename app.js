@@ -15,6 +15,14 @@ function checkKick() {
     {
         displayTextOnScreen( 'h1', 'He got it right.' );
         displayTextOnScreen( 'p', 'You discovered a secret number.' );
+    } else
+    {
+        if (secretNumber>kick) {
+            displayTextOnScreen( 'p', 'The secret number is smaller' );
+        } else
+        {
+            displayTextOnScreen( 'p', 'The secret number is higher' );
+        }
     }
 }
 
