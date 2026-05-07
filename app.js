@@ -1,5 +1,8 @@
+let listOfDrawnNumbers = [];
+let numberLimit = 10;
 let secretNumber = randomNumber();
 let attempts = 1;
+
 function displayTextOnScreen ( tag, text )
 {
     let field = document.querySelector( tag );
@@ -34,7 +37,20 @@ function checkKick() {
 }
 
 function randomNumber() {
-    return parseInt( Math.random() * 10 + 1 );
+    let chosenNumber = parseInt( Math.random() * numberLimit + 1 );
+
+if (numberElementList == 3) {
+    listOfDrawnNumbers = [];
+}
+
+    if (listOfDrawnNumbers.includes(chosenNumber)) {
+        return randomNumber();
+    } else
+    {
+        listOfDrawnNumbers.push( chosenNumber );
+        console.log(listOfDrawnNumbers);
+        return chosenNumber;
+    }
 }
 
 function clearField() {
